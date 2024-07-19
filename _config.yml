@@ -1,0 +1,19 @@
+url: "https://mrinalcs.github.io"
+baseurl: "/note"
+title: "Mrinal Chandra Sarkar"
+
+permalink: /:title
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+
+
+pagination:
+  active: true
+  paginate: 6  # Number of posts per page
+

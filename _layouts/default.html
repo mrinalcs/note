@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-IN" }}">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>{{ page.title }} | {{ site.title }}</title>
+<meta name="description" content="{{ page.description | strip_html | strip_newlines | truncate: 160 }}">
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+ 
+<!-- OpenGraph -->
+<meta property="og:title" content="{{ page.title }} – {{ site.title }}">
+<meta property="og:description" content="{{ page.description | strip_html | strip_newlines | truncate: 160 }}">
+<meta property="og:image" content="{{ page.image | absolute_url }}">
+    
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+<header>
+      <a href="/">
+  {% unless page.layout == "post" %}
+    Mrinal : {{ page.title }}
+  {% else %}
+    Mrinal : Note
+  {% endunless %}
+</a>
+
+</header>
+
+<main>
+{{ content }}
+</main>
+
+<footer><p>&copy; {{ "now" | date: "%Y" }} {{site.title}}</p></footer>
+<script src="/assets/js/script.js"></script>
+</body>
+</html>
